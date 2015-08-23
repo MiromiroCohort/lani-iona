@@ -4,4 +4,7 @@ class SiteController < ApplicationController
     @title = "Welcome!"
   end
 
+  def about
+  end
+
 end
