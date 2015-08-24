@@ -9,6 +9,14 @@ body {
   margin-bottom: 60px;
 }
 
+.this-page {
+  background-color: rgb(231, 231, 231);
+  box-sizing: border-box;
+  color: rgb(85, 85, 85);
+  display: block;
+  padding: 15px;
+}
+
 .main {
   margin-top: 50px;
 }
