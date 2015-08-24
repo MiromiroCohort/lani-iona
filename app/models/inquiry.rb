@@ -1,5 +1,6 @@
 class Inquiry
   include Mongoid::Document
+  validates :email, presence: true
 
   field :name, type: String
   field :email, type: String

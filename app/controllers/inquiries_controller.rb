@@ -3,12 +3,15 @@ class InquiriesController < ApplicationController
   end
 
   def create
-    inquiry = Inquiry.create(inquiry_params)
-
-    InquiryMailer.inquiry_email(inquiry).deliver_now
-
-    flash[:notice] = "Thank you for sending us a message, #{inquiry.name}."
-    redirect_to root_url
+    @inquiry = Inquiry.create(inquiry_params)
+    if (@inquiry.valid?)
+      InquiryMailer.inquiry_email(@inquiry).deliver_now
+      flash[:notice] = "Thank you for sending us a message, #{@inquiry.name}"
+      redirect_to root_url
+    else
+      flash.now.alert = "There is a problem with your form. Please check it."
+      render :new
+    end
   end
 
   private
