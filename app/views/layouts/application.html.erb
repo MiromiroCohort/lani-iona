@@ -49,6 +49,22 @@
 
     <!-- Begin page content -->
     <main class="container main" role="main">
+      <% if flash.alert %>
+        <div class="messages">
+          <div class="alert alert-danger" role="alert">
+            <%= flash.alert %>
+          </div>
+        </div>
+      <% end %>
+
+      <% if flash.notice %>
+        <div class="messages">
+          <div class="alert alert-success" role="alert">
+            <%= flash.notice %>
+          </div>
+        </div>
+      <% end %>
+
       <%= yield %>
     </main>
 
