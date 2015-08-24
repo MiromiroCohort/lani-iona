@@ -7,4 +7,7 @@ class SiteController < ApplicationController
   def about
   end
 
+  def privacy
+  end
+
 end
