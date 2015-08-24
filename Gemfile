@@ -23,6 +23,7 @@ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'mongoid', '~> 5.0.0.beta'
 
 gem 'letter_opener', group: :development
 
