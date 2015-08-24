@@ -1,5 +1,6 @@
 class InquiriesController < ApplicationController
   def new
+    @inquiry = Inquiry.new
   end
 
   def create
@@ -9,7 +10,6 @@ class InquiriesController < ApplicationController
       flash[:notice] = "Thank you for sending us a message, #{@inquiry.name}"
       redirect_to root_url
     else
-      flash.now.alert = "There is a problem with your form. Please check it."
       render :new
     end
   end
